@@ -16,20 +16,20 @@ export const Auth = ({navigation}: ScreenProps) => {
   }, []);
 
   return (
-    <View className="flex-1">
-      <Image
-        className="w-[95%] h-64 m-auto"
-        source={require('../assets/img/auth.png')}
-      />
-
+    <View className="flex-1 justify-center gap-y-14">
       <Container className="gap-y-3">
-        <Text className={`${Styles.fonts.kb} text-black text-4xl`}>
-          Welcome!
-        </Text>
+        <Text className={`${Styles.fonts.kb} text-black text-4xl`}>Hello!</Text>
         <Text className={`${Styles.fonts.km} text-base`}>
           Login with your data that you entered during registration
         </Text>
       </Container>
+
+      <View>
+        <Image
+          className="w-[95%] h-64 m-auto"
+          source={require('../assets/img/auth.png')}
+        />
+      </View>
 
       <Container className="gap-y-4">
         <RoundedButton onPress={handleSignUp} title="Sign Up" />

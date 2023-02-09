@@ -25,5 +25,7 @@ export const Styles = {
     primary: '#824ac6',
     lg_start: '#4b4fdb',
     lg_end: '#824ac6',
+    red: '#ff2e2e',
+    green: '#3bb143',
   },
 };

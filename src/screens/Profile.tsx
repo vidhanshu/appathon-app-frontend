@@ -145,7 +145,7 @@ export const Profile = ({route, navigation}: ScreenProps) => {
         </View>
         <RoundedButton
           variant="color"
-          btn_color="green"
+          btn_color={Styles.colors.green}
           onPress={handleEditProfile}
           title="Edit"
           className="mt-5"
@@ -154,7 +154,7 @@ export const Profile = ({route, navigation}: ScreenProps) => {
         <RoundedButton
           loading={loadingDeletion}
           variant="color"
-          btn_color="red"
+          btn_color={Styles.colors.red}
           title="Delete"
           className="mt-5"
           onPress={deleteAccount}

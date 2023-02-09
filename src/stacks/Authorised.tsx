@@ -9,6 +9,7 @@ import {EditProfile, Home, Profile, Settings} from '../screens';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import React from 'react';
+import {Styles} from '../styles';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
@@ -48,7 +49,7 @@ const HomeTabs = () => {
   return (
     <Tabs.Navigator
       screenOptions={({route}) => ({
-        tabBarIcon: ({focused, color}) => {
+        tabBarIcon: ({focused}) => {
           let iconName = '';
           let routeName = route.name;
 
@@ -63,7 +64,17 @@ const HomeTabs = () => {
               iconName = focused ? 'home' : 'home-outline';
               break;
           }
-          return <Ionicons name={iconName} size={20} color={color} />;
+          return <Ionicons name={iconName} size={20} color={'#4b4fdb'} />;
+        },
+        tabBarLabelStyle: {
+          color: Styles.colors.primary,
+        },
+        headerStyle: {
+          backgroundColor: Styles.colors.primary,
+        },
+        headerTitleStyle: {
+          color: '#fff',
+          marginLeft: 10,
         },
       })}>
       <Tabs.Screen name={HOME_TAB} component={Home} />
