@@ -43,3 +43,27 @@ export type ShortProfile = {
   name: string;
   username: string;
 };
+
+export type HowToLearn = {
+  id: string;
+  name: string;
+  image: string;
+  link: string;
+  platform: string;
+};
+export type RelatedSkill = {
+  id: string;
+  name: string;
+  how_to_learn: HowToLearn[];
+};
+export type Domain = {
+  id: string;
+  name: string;
+  related_skills: RelatedSkill[];
+};
+export type Master = {
+  id: string;
+  name: string;
+  qualification: string;
+  experience: number;
+};

@@ -22,8 +22,8 @@ export const Styles = {
     tn: 'text-black font-[Karla-Regular] text-[1.6rem] leading-[2.4rem]',
   },
   colors: {
-    primary: '#6d8be8',
-    lg_start: '#6d8be8',
-    lg_end: '#4b4fdb',
+    primary: '#824ac6',
+    lg_start: '#4b4fdb',
+    lg_end: '#824ac6',
   },
 };

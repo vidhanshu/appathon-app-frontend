@@ -1,12 +1,16 @@
+import React, {useEffect} from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
 
 import {AppStack} from './src/stacks';
 import {NavigationContainer} from '@react-navigation/native';
 import {Provider} from 'react-redux';
-import React from 'react';
+import SplashScreen from 'react-native-splash-screen';
 import store from './src/redux/store';
 
 const App = () => {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
   return (
     <SafeAreaView className="flex flex-1">
       <StatusBar />
