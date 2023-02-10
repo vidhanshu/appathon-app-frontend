@@ -9,3 +9,6 @@ export const AUTH_SCREEN = 'AuthScreen';
 export const EDIT_PROFILE_SCREEN = 'EditProfileScreen';
 export const FORGOT_PASSWORD_SCREEN = 'ForgotPasswordScreen';
 export const GET_STARTED_SCREEN = 'GetStartedScreen';
+export const SKILLS_SCREEN = 'SkillsScreen';
+export const SKILL_SCREEN = 'SkillScreen';
+export const TRENDING_TOPICS_TAB = 'TrendingTopics';
