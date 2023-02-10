@@ -5,8 +5,11 @@ import {SIGN_IN_SCREEN, SIGN_UP_SCREEN} from '../constants';
 
 import {ScreenProps} from '../@types';
 import {Styles} from '../styles';
+import {useAppSelector} from '../redux/hooks';
 
 export const Auth = ({navigation}: ScreenProps) => {
+  const {styles} = useAppSelector(state => state.theme);
+
   const handleSignIn = useCallback(() => {
     navigation.navigate(SIGN_IN_SCREEN);
   }, []);
@@ -16,10 +19,14 @@ export const Auth = ({navigation}: ScreenProps) => {
   }, []);
 
   return (
-    <View className="flex-1 justify-center gap-y-14">
+    <View className={`flex-1 justify-center gap-y-14 ${styles.bg__colors.bp}`}>
       <Container className="gap-y-3">
-        <Text className={`${Styles.fonts.kb} text-black text-4xl`}>Hello!</Text>
-        <Text className={`${Styles.fonts.km} text-base`}>
+        <Text
+          className={`${Styles.fonts.kb} ${styles.text__colors.tm} text-4xl`}>
+          Hello!
+        </Text>
+        <Text
+          className={`${Styles.fonts.km} ${styles.text__colors.tp}  text-base`}>
           Login with your data that you entered during registration
         </Text>
       </Container>

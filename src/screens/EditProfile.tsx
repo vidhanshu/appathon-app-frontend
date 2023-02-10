@@ -7,6 +7,8 @@ import {ScrollView} from 'react-native';
 import {UpdateUserHandler} from '../requests/handlers/Auth';
 
 export function EditProfile({route}: ScreenProps) {
+  const {styles, theme} = useAppSelector(state => state.theme);
+
   const [loading, setLoading] = React.useState(false);
   const token = useAppSelector(state => state.auth.token);
   const [editProfileDetails, setEditProfileDetails] =
@@ -42,7 +44,7 @@ export function EditProfile({route}: ScreenProps) {
   }, [editProfileDetails, token, dispatch, route.params]);
 
   return (
-    <ScrollView className="flex-1">
+    <ScrollView className={`flex-1 ${styles.bg__colors.bp}`}>
       <Container>
         <RoundedInput
           label="Name"
@@ -66,6 +68,7 @@ export function EditProfile({route}: ScreenProps) {
           classOuterName="mb-5"
         />
         <RoundedInput
+          secure
           label="Password"
           placeholder="Password"
           value={editProfileDetails.password}

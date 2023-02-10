@@ -2,14 +2,16 @@ import {Container, RoundedButton, RoundedInput} from '../components';
 import {FORGOT_PASSWORD_SCREEN, SIGN_UP_SCREEN} from '../constants';
 import React, {useCallback} from 'react';
 import {ScrollView, Text} from 'react-native';
+import {useAppDispatch, useAppSelector} from '../redux/hooks';
 
 import LinearGradient from 'react-native-linear-gradient';
 import {LoginUserHandler} from '../requests/handlers/Auth';
 import {ScreenProps} from '../@types';
 import {Styles} from '../styles';
-import {useAppDispatch} from '../redux/hooks';
 
 export function SignIn({navigation}: ScreenProps) {
+  const {styles} = useAppSelector(state => state.theme);
+
   const [signInDetails, setSignInDetails] = React.useState({
     email: '',
     password: '',
@@ -44,7 +46,7 @@ export function SignIn({navigation}: ScreenProps) {
   }, [signInDetails, dispatch]);
 
   return (
-    <ScrollView className="flex-1">
+    <ScrollView className={`flex-1 ${styles.bg__colors.bp}`}>
       <LinearGradient
         colors={[Styles.colors.lg_start, Styles.colors.lg_end]}
         className="rounded-br-full h-32 p-4">
@@ -65,6 +67,7 @@ export function SignIn({navigation}: ScreenProps) {
           keyboardType="email-address"
         />
         <RoundedInput
+          secure
           value={signInDetails.password}
           onChangeText={handlePasswordChange}
           classOuterName="mt-5 mb-10"

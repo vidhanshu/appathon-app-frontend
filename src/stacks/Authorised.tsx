@@ -4,11 +4,23 @@ import {
   HOME_TAB,
   PROFILE_TAB,
   SETTINGS_SCREEN,
+  SKILLS_SCREEN,
+  SKILL_SCREEN,
+  TRENDING_TOPICS_TAB,
 } from '../constants';
-import {EditProfile, Home, Profile, Settings} from '../screens';
+import {
+  EditProfile,
+  Home,
+  Profile,
+  Settings,
+  Skill,
+  Skills,
+  TrendingTopics,
+} from '../screens';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import React from 'react';
+import SI from 'react-native-vector-icons/SimpleLineIcons';
 import {Styles} from '../styles';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -21,6 +33,10 @@ export function Authorised() {
         headerShown: false,
         animation: 'slide_from_right',
         animationDuration: 10,
+        headerStyle: {
+          backgroundColor: Styles.colors.primary,
+        },
+        headerTintColor: '#fff',
       }}>
       <Stack.Screen name={HOME_SCREEN} component={HomeTabs} />
       <Stack.Screen
@@ -30,6 +46,22 @@ export function Authorised() {
         }}
         name={SETTINGS_SCREEN}
         component={Settings}
+      />
+      <Stack.Screen
+        options={{
+          headerShown: true,
+          headerTitle: 'Skills',
+        }}
+        name={SKILLS_SCREEN}
+        component={Skills}
+      />
+      <Stack.Screen
+        options={{
+          headerShown: true,
+          headerTitle: 'Skill',
+        }}
+        name={SKILL_SCREEN}
+        component={Skill}
       />
       <Stack.Screen
         options={{
@@ -60,6 +92,9 @@ const HomeTabs = () => {
             case PROFILE_TAB:
               iconName = focused ? 'person' : 'person-outline';
               break;
+            case TRENDING_TOPICS_TAB:
+              iconName = focused ? 'trending-up' : 'trending-up-outline';
+              break;
             default:
               iconName = focused ? 'home' : 'home-outline';
               break;
@@ -78,6 +113,7 @@ const HomeTabs = () => {
         },
       })}>
       <Tabs.Screen name={HOME_TAB} component={Home} />
+      <Tabs.Screen name={TRENDING_TOPICS_TAB} component={TrendingTopics} />
       <Tabs.Screen name={PROFILE_TAB} component={Profile} />
     </Tabs.Navigator>
   );

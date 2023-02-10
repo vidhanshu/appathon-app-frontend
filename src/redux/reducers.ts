@@ -1,3 +1,5 @@
+import {DARK_THEME, LIGHT_THEME} from '../styles';
+
 import {AuthStateType} from '../@types';
 import {createSlice} from '@reduxjs/toolkit';
 
@@ -22,5 +24,17 @@ const authSlice = createSlice({
     },
   },
 });
+const themeSlice = createSlice({
+  name: 'theme',
+  initialState: {theme: 'light', styles: LIGHT_THEME},
+  reducers: {
+    changeTheme(state) {
+      state.theme = state.theme === 'light' ? 'dark' : 'light';
+      state.styles = state.theme === 'light' ? LIGHT_THEME : DARK_THEME;
+    },
+  },
+});
 export const {reducer: authReducer} = authSlice;
 export const {login, logout} = authSlice.actions;
+export const {reducer: themeReducer} = themeSlice;
+export const {changeTheme} = themeSlice.actions;

@@ -9,8 +9,11 @@ import {ScrollView, Text} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {ScreenProps} from '../@types';
 import {Styles} from '../styles';
+import {useAppSelector} from '../redux/hooks';
 
 export function ForgotPassword({navigation}: ScreenProps) {
+  const {styles} = useAppSelector(state => state.theme);
+
   const [email, setEmail] = React.useState('');
   const [emailSent, setEmailSent] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
@@ -51,7 +54,7 @@ export function ForgotPassword({navigation}: ScreenProps) {
   }, [resetPasswordDetails, navigation]);
 
   return (
-    <ScrollView className="flex-1">
+    <ScrollView className={`flex-1 ${styles.bg__colors.bp}`}>
       <LinearGradient
         colors={[Styles.colors.lg_start, Styles.colors.lg_end]}
         className="rounded-br-full h-44 p-4">

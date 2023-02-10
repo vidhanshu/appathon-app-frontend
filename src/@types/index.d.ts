@@ -50,20 +50,37 @@ export type HowToLearn = {
   image: string;
   link: string;
   platform: string;
+  created_at: string;
+  description: string;
+};
+export type HowToLearnArray = {
+  id: string;
+  how_to_learn: HowToLearn[];
 };
 export type RelatedSkill = {
   id: string;
   name: string;
-  how_to_learn: HowToLearn[];
+  image: string;
 };
 export type Domain = {
   id: string;
   name: string;
+  description: string;
+  image: string;
   related_skills: RelatedSkill[];
 };
 export type Master = {
   id: string;
+  image: string;
   name: string;
-  qualification: string;
+  domain: string;
+  teaches: string[];
   experience: number;
+};
+export type SkillType = {
+  id: string;
+  name: string;
+  image: string;
+  introduction: string;
+  history: string;
 };

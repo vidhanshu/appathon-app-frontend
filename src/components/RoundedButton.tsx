@@ -10,6 +10,7 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import React from 'react';
 import {Styles} from '../styles';
+import {useAppSelector} from '../redux/hooks';
 
 type RoundedButtonProps = PressableProps & {
   title: string;
@@ -26,6 +27,8 @@ export function RoundedButton({
   text_color = '#fff',
   ...props
 }: RoundedButtonProps) {
+  const {styles} = useAppSelector(state => state.theme);
+
   const btnColor = props.disabled || loading ? '#ccc' : btn_color;
   if (variant === 'color') {
     return (
@@ -94,7 +97,8 @@ export function RoundedButton({
         borderColor,
       }}>
       {!loading ? (
-        <Text className={`text-center text-base text-black ${Styles.fonts.km}`}>
+        <Text
+          className={`text-center text-base ${styles.text__colors.tm} ${Styles.fonts.km}`}>
           {title}
         </Text>
       ) : (

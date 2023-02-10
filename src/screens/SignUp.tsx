@@ -7,14 +7,16 @@ import {
 import React, {useCallback} from 'react';
 import {ScreenProps, SignUpDataType} from '../@types';
 import {ScrollView, Text} from 'react-native';
+import {useAppDispatch, useAppSelector} from '../redux/hooks';
 
 import LinearGradient from 'react-native-linear-gradient';
 import {SIGN_IN_SCREEN} from '../constants';
 import {SignUpUserHandler} from '../requests/handlers/Auth';
 import {Styles} from '../styles';
-import {useAppDispatch} from '../redux/hooks';
 
 export function SignUp({navigation}: ScreenProps) {
+  const {styles, theme} = useAppSelector(state => state.theme);
+
   const [loading, setLoading] = React.useState(false);
   const [signUpDetails, setSignUpDetails] = React.useState<SignUpDataType>({
     email: '',
@@ -41,7 +43,7 @@ export function SignUp({navigation}: ScreenProps) {
   }, [signUpDetails, dispatch]);
 
   return (
-    <ScrollView className="flex-1">
+    <ScrollView className={`flex-1 ${styles.bg__colors.bgt}`}>
       <LinearGradient
         colors={[Styles.colors.lg_start, Styles.colors.lg_end]}
         className="rounded-br-full h-24 p-4">
@@ -69,6 +71,7 @@ export function SignUp({navigation}: ScreenProps) {
           onChangeText={handleEmailChange}
         />
         <RoundedInput
+          secure
           value={signUpDetails.password}
           classOuterName="mb-10"
           label="Password"

@@ -6,3 +6,7 @@ export * from './SignUp';
 export * from './Auth';
 export * from './EditProfile';
 export * from './ForgotPassword';
+export * from './GetStarted';
+export * from './Skills';
+export * from './Skill';
+export * from './TrendingTopics';

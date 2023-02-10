@@ -1,4 +1,11 @@
-import {Alert, RefreshControl, ScrollView, Text, View} from 'react-native';
+import {
+  ActivityIndicator,
+  Alert,
+  RefreshControl,
+  ScrollView,
+  Text,
+  View,
+} from 'react-native';
 import {Container, RoundedButton} from '../components';
 import {DeleteUserHandler, LogoutUserHandler} from '../requests/handlers/Auth';
 import React, {useCallback} from 'react';
@@ -13,9 +20,12 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MCIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MIcons from 'react-native-vector-icons/MaterialIcons';
 import {Styles} from '../styles';
+import {changeTheme} from '../redux/reducers';
 import {getTimeDifference} from '../utils';
 
 export const Profile = ({route, navigation}: ScreenProps) => {
+  const {styles, theme} = useAppSelector(state => state.theme);
+
   const id = route.params;
   const [refreshing] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
@@ -77,6 +87,7 @@ export const Profile = ({route, navigation}: ScreenProps) => {
 
   return (
     <ScrollView
+      className={`flex-1 ${styles.bg__colors.bp}`}
       refreshControl={
         <RefreshControl
           refreshing={refreshing}
@@ -84,62 +95,74 @@ export const Profile = ({route, navigation}: ScreenProps) => {
           colors={[Styles.colors.lg_end]}
         />
       }>
-      <Container className="flex-1 gap-y-5">
+      <Container className={'flex-1 gap-y-5'}>
         <View className="p-2 rounded-md">
-          <View>
+          <View className={`${styles.borders.bat} p-4 rounded-md`}>
             <View className="flex-row gap-x-2">
               <Anticons name="user" color={Styles.colors.lg_end} size={25} />
-              <Text className={`text-black ${Styles.fonts.kb} text-xl`}>
+              <Text
+                className={`${styles.text__colors.tp} ${Styles.fonts.kb} text-xl`}>
                 Name:
               </Text>
             </View>
-            <Text className={`${Styles.fonts.km} text-base`}>
-              {profile.name}
+            <Text
+              className={`${Styles.fonts.km} ${styles.text__colors.tt} text-base`}>
+              {loading ? <ActivityIndicator /> : profile.name}
             </Text>
           </View>
-          <View className="my-10">
+          <View className={`my-5 ${styles.borders.bat} p-4 rounded-md`}>
             <View className="flex-row gap-x-2">
               <MCIcons
                 name="identifier"
                 color={Styles.colors.lg_end}
                 size={25}
               />
-              <Text className={`text-black ${Styles.fonts.kb} text-xl`}>
+              <Text
+                className={`${styles.text__colors.tp} ${Styles.fonts.kb} text-xl`}>
                 Username:
               </Text>
             </View>
-            <Text className={`${Styles.fonts.km} text-base`}>
-              {profile.username}
+            <Text
+              className={`${Styles.fonts.km} ${styles.text__colors.tt} text-base`}>
+              {loading ? <ActivityIndicator /> : profile.username}
             </Text>
           </View>
-          <View>
+          <View className={`${styles.borders.bat} p-4 rounded-md`}>
             <View className="flex-row gap-x-2">
               <MIcons
                 name="alternate-email"
                 color={Styles.colors.lg_end}
                 size={25}
               />
-              <Text className={`text-black ${Styles.fonts.kb} text-xl`}>
+              <Text
+                className={`${styles.text__colors.tp} ${Styles.fonts.kb} text-xl`}>
                 Email:
               </Text>
             </View>
-            <Text className={`${Styles.fonts.km} text-base`}>
-              {profile.email}
+            <Text
+              className={`${Styles.fonts.km} ${styles.text__colors.tt} text-base`}>
+              {loading ? <ActivityIndicator /> : profile.email}
             </Text>
           </View>
-          <View className="mt-10">
+          <View className={`mt-5 ${styles.borders.bat} p-4 rounded-md`}>
             <View className="flex-row gap-x-2">
               <Ionicons
                 name="time-outline"
                 color={Styles.colors.lg_end}
                 size={25}
               />
-              <Text className={`text-black ${Styles.fonts.kb} text-xl`}>
+              <Text
+                className={`${styles.text__colors.tp} ${Styles.fonts.kb} text-xl`}>
                 Member since:
               </Text>
             </View>
-            <Text className={`${Styles.fonts.km} text-base`}>
-              {getTimeDifference(profile.registeredAt)}
+            <Text
+              className={`${Styles.fonts.km} ${styles.text__colors.tt} text-base`}>
+              {loading ? (
+                <ActivityIndicator />
+              ) : (
+                getTimeDifference(profile.registeredAt)
+              )}
             </Text>
           </View>
         </View>
@@ -151,6 +174,18 @@ export const Profile = ({route, navigation}: ScreenProps) => {
           className="mt-5"
         />
         <RoundedButton loading={loading} onPress={logout} title="Logout" />
+        <RoundedButton
+          loading={loadingDeletion}
+          variant="color"
+          btn_color={'#f19d0f'}
+          title={
+            theme === 'light' ? 'Change mode - Dark' : 'Change mode - Light'
+          }
+          className="mt-5"
+          onPress={() => {
+            dispatch(changeTheme());
+          }}
+        />
         <RoundedButton
           loading={loadingDeletion}
           variant="color"
