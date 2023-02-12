@@ -43,7 +43,7 @@ export function SignUp({navigation}: ScreenProps) {
   }, [signUpDetails, dispatch]);
 
   return (
-    <ScrollView className={`flex-1 ${styles.bg__colors.bgt}`}>
+    <ScrollView className={`flex-1 ${styles.bg__colors.bp}`}>
       <LinearGradient
         colors={[Styles.colors.lg_start, Styles.colors.lg_end]}
         className="rounded-br-full h-24 p-4">

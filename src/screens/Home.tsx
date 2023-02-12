@@ -7,10 +7,11 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import {Container, RoundedButton} from '../components';
-import {Domain, ScreenProps} from '../@types';
+import {Container, RoundedButton, SearchBar} from '../components';
+import {Domain, OnSelectProp, ScreenProps} from '../@types';
 import React, {useCallback} from 'react';
 
+import Anticons from 'react-native-vector-icons/AntDesign';
 import {DATA} from '../constants/data';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {SKILLS_SCREEN} from '../constants';
@@ -20,9 +21,9 @@ import {useAppSelector} from '../redux/hooks';
 export const Home = ({navigation}: ScreenProps) => {
   const {styles, theme} = useAppSelector(state => state.theme);
   const [search, setSearch] = React.useState<string>('');
-  const [selectedInterests, setSelectedInterests] = React.useState<string[]>(
-    [],
-  );
+  const [selectedInterests, setSelectedInterests] = React.useState<
+    OnSelectProp[]
+  >([]);
   //inital filtered interests
   const [filteredInterests, setFilteredInterests] =
     React.useState<Domain[]>(DATA);
@@ -36,12 +37,12 @@ export const Home = ({navigation}: ScreenProps) => {
     });
   }, []);
   //to select the interests
-  const onSelectInterest = useCallback((interest: string) => {
+  const onSelectInterest = useCallback(({id, name}: OnSelectProp) => {
     setSelectedInterests(prev => {
-      if (prev.includes(interest)) {
-        return prev.filter(item => item !== interest);
+      if (prev.find(e => e.id === id)) {
+        return prev.filter(e => e.id !== id);
       }
-      return [...prev, interest];
+      return [...prev, {id, name}];
     });
   }, []);
   //to navigate to next screen
@@ -55,26 +56,25 @@ export const Home = ({navigation}: ScreenProps) => {
     }
     navigation.navigate(SKILLS_SCREEN, {selectedInterests});
   }, [selectedInterests, navigation]);
+  //to clear the search
+  const onCutHandler = useCallback(() => {
+    setSearch('');
+    setFilteredInterests(DATA);
+  }, []);
 
   return (
     <Container className={`flex-1 gap-y-5 ${styles.bg__colors.bp}`}>
-      <Text className={`${Styles.fonts.kb} ${styles.text__colors.tm} text-xl`}>
+      <Text className={`${Styles.fonts.kb} ${styles.text__colors.tm} text-xl mb-5`}>
         Choose Your Area of interests
       </Text>
-      <View
-        className={`${styles.borders.bat} flex-row items-center px-2 rounded-md`}>
-        <Ionicons name="search-outline" size={24} color="gray" />
-        <TextInput
-          placeholder="Type area of interest..."
-          className={`${Styles.fonts.km} ml-2 w-full ${styles.text__colors.tm} flex-1 ${styles.text__colors.tm}}`}
-          onChangeText={handleInterestChange}
-          placeholderTextColor={theme === 'light' ? 'gray' : 'white'}
-        />
-      </View>
-
+      <SearchBar
+        onChange={handleInterestChange}
+        search={search}
+        onCutHandler={onCutHandler}
+      />
       <ScrollView showsVerticalScrollIndicator={false}>
-        {filteredInterests.map((aoi, index) => (
-          <DomainCard {...aoi} onSelect={onSelectInterest} key={index} />
+        {filteredInterests.map(aoi => (
+          <DomainCard {...aoi} onSelect={onSelectInterest} key={aoi.id} />
         ))}
       </ScrollView>
       <RoundedButton onPress={handleExplore} title="Explore skills" />
@@ -83,21 +83,21 @@ export const Home = ({navigation}: ScreenProps) => {
 };
 
 type DomainCardProp = Domain & {
-  onSelect: (skill: string) => void;
+  onSelect: ({id, name}: OnSelectProp) => void;
 };
-export const DomainCard = ({image, name, onSelect}: DomainCardProp) => {
+export const DomainCard = ({image, name, id, onSelect}: DomainCardProp) => {
   const [selected, setselected] = React.useState<boolean>(false);
   const {styles} = useAppSelector(state => state.theme);
 
   return (
     <Pressable
       onPress={() => {
-        onSelect(name);
+        onSelect({id, name});
         setselected(prev => !prev);
       }}
       className={`${styles.borders.bat} p-4 flex-row  items-center rounded-md mb-2`}>
       {selected ? (
-        <View className="h-10 w-10 rounded-full mr-5">
+        <View className="h-10 w-10 rounded-full mr-5 ">
           <Ionicons name="checkmark-circle" size={42} color="green" />
         </View>
       ) : (

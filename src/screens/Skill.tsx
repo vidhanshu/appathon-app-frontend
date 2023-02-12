@@ -1,5 +1,5 @@
 import {HOW_TO_LEARN, MASTERS, SKILLS_DETAILS} from '../constants/data';
-import {HowToLearn, HowToLearnArray, ScreenProps, SkillType} from '../@types';
+import {HowToLearn, ScreenProps, SkillType} from '../@types';
 import {Image, Linking, Pressable, ScrollView, Text, View} from 'react-native';
 import React, {useState} from 'react';
 
@@ -15,11 +15,12 @@ export function Skill({route}: ScreenProps) {
   const [skill] = useState<SkillType>(
     SKILLS_DETAILS.filter(e => e.id === id)[0] ?? ({} as SkillType),
   );
-  const [howToLearn] = useState<HowToLearnArray>(
-    HOW_TO_LEARN.find(e => e.id === id) ?? ({} as HowToLearnArray),
+  const [howToLearn] = useState<HowToLearn[]>(
+    HOW_TO_LEARN.filter(e => e.skill_id === id),
   );
+
   return (
-    <ScrollView className={`flex-1 ${styles.bg__colors.bgt}`}>
+    <ScrollView className={`flex-1 ${styles.bg__colors.bp}`}>
       <Container>
         <View className={`${styles.borders.bat} rounded-md p-4`}>
           <Image
@@ -83,7 +84,7 @@ export function Skill({route}: ScreenProps) {
         </Text>
         <ScrollView>
           <View className="w-full">
-            {howToLearn.how_to_learn.map((e, kd) => {
+            {howToLearn.map((e, kd) => {
               return <HowToLearnCard key={kd} {...e} />;
             })}
           </View>
@@ -95,7 +96,6 @@ export function Skill({route}: ScreenProps) {
 
 const HowToLearnCard = ({
   created_at,
-  id,
   image,
   link,
   name,
@@ -112,7 +112,7 @@ const HowToLearnCard = ({
       className={`${styles.borders.bat} mb-5 p-2`}>
       <View className="flex-row  items-center">
         <Image
-          resizeMode="cover"
+          resizeMode="contain"
           source={{uri: image}}
           className="w-32 h-32 self-center"
         />

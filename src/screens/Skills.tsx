@@ -1,21 +1,24 @@
 import {Image, Pressable, Text, View} from 'react-native';
+import {OnSelectProp, ScreenProps} from '../@types';
 import React, {useCallback} from 'react';
 
 import {Container} from '../components';
-import {DATA} from '../constants/data';
+import {RELATED_SKILLS} from '../constants/data';
 import {SKILL_SCREEN} from '../constants';
-import {ScreenProps} from '../@types';
 import {ScrollView} from 'react-native';
 import {Styles} from '../styles';
 import {useAppSelector} from '../redux/hooks';
 
 export function Skills({navigation, route}: ScreenProps) {
-  const {styles, theme} = useAppSelector(state => state.theme);
+  const {styles} = useAppSelector(state => state.theme);
 
-  const SelectedInterests: string[] = route.params?.selectedInterests || [];
-  const [skills, setSkills] = React.useState(
-    DATA.filter(e => SelectedInterests.includes(e.name)),
-  );
+  const SelectedInterests: OnSelectProp[] =
+    route.params?.selectedInterests || [];
+
+  const domain_ids = SelectedInterests.map(e => e.id);
+
+  const skills = RELATED_SKILLS.filter(e => domain_ids.includes(e.domain_id));
+
   const handleNextScreen = useCallback(
     (id: string) => {
       navigation.navigate(SKILL_SCREEN, {
@@ -33,25 +36,22 @@ export function Skills({navigation, route}: ScreenProps) {
       <View className="mb-5">
         <ScrollView showsHorizontalScrollIndicator={false} horizontal>
           {SelectedInterests.map((e, i) => {
-            return <Tag key={i} text={e} />;
+            return <Tag key={i} text={e.name} />;
           })}
         </ScrollView>
       </View>
       {/* rendering all the skills related to the domains chosen */}
       <ScrollView showsVerticalScrollIndicator={false}>
         {skills.map(e => {
-          const related_skills = e.related_skills;
-          return related_skills.map((k, idx) => {
-            return (
-              <SkillCard
-                id={k.id}
-                image={k.image}
-                name={k.name}
-                onPress={handleNextScreen}
-                key={idx}
-              />
-            );
-          });
+          return (
+            <SkillCard
+              id={e.id}
+              image={e.image}
+              name={e.name}
+              onPress={handleNextScreen}
+              key={e.id}
+            />
+          );
         })}
       </ScrollView>
     </Container>
@@ -65,7 +65,7 @@ const Tag = ({text}: TagProps) => {
   const {styles} = useAppSelector(state => state.theme);
   return (
     <View
-      className={`${styles.borders.bat} ${styles.bg__colors.bgpurplel} h-9 py-2 px-4 rounded-full max-w-fit mr-2`}>
+      className={`${styles.borders.bat} ${styles.bg__colors.bgpurplel} h-9 py-2 px-4 rounded-md max-w-fit mr-2`}>
       <Text className={`${Styles.fonts.km} ${styles.text__colors.tt}`}>
         {text}
       </Text>

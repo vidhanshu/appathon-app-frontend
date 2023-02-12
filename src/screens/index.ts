@@ -10,3 +10,4 @@ export * from './GetStarted';
 export * from './Skills';
 export * from './Skill';
 export * from './TrendingTopics';
+export * from './SearchUser';

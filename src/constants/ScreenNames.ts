@@ -12,3 +12,4 @@ export const GET_STARTED_SCREEN = 'GetStartedScreen';
 export const SKILLS_SCREEN = 'SkillsScreen';
 export const SKILL_SCREEN = 'SkillScreen';
 export const TRENDING_TOPICS_TAB = 'TrendingTopics';
+export const SEARCH_USERS_TAB = 'SearchUsers';

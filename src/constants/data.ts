@@ -1,4 +1,4 @@
-import {Domain, HowToLearnArray, Master, SkillType} from '../@types';
+import {Domain, HowToLearn, Master, RelatedSkill, SkillType} from '../@types';
 
 export const DATA: Domain[] = [
   {
@@ -8,25 +8,6 @@ export const DATA: Domain[] = [
       'https://www.elegantthemes.com/blog/wp-content/uploads/2018/12/top11.png',
     description:
       'Web development is the work involved in developing a Web site for the Internet (World Wide Web) or an intranet (a private network). Web development can range from developing a simple single static page of plain text to complex Web-based Internet applications (web apps), electronic businesses, and social network services.',
-    related_skills: [
-      {
-        id: 'd1rs1',
-        name: 'HTML',
-        image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpngGRjYX1ca7qAADU3K6eGLj7ShQE3L2otdzfryl_Y9Ht2QRoQKYQbsXd36XIxMbYOw0&usqp=CAU',
-      },
-      {
-        id: 'd1rs2',
-        name: 'Java Script',
-        image:
-          'https://sllearnengine.blob.core.windows.net/material-images/087a9b79a3094d4382bcdbfdb6718734-JS_1.png',
-      },
-      {
-        id: 'd1rs3',
-        name: 'CSS',
-        image: 'https://cdn-icons-png.flaticon.com/512/919/919826.png',
-      },
-    ],
   },
   {
     id: 'd3',
@@ -35,31 +16,6 @@ export const DATA: Domain[] = [
       'https://img.freepik.com/free-vector/cyber-security-concept_23-2148532223.jpg',
     description:
       'Cyber security is the practice of defending computers, servers, mobile devices, electronic systems, networks, and data from malicious attacks.',
-    related_skills: [
-      {
-        id: 'd3rs1',
-        name: 'Ethical Hacking',
-        image:
-          'https://img.freepik.com/free-vector/cyber-security-concept_23-2148532223.jpg',
-      },
-      {
-        id: 'd3rs2',
-        name: 'Bug Bounty',
-        image:
-          'https://www.shutterstock.com/image-vector/bug-shield-security-flat-sign-260nw-489707539.jpg',
-      },
-      {
-        id: 'd3rs3',
-        name: 'Digital Forensics',
-        image: 'https://www.ecpi.edu/sites/default/files/ECPI%20July%2029.png',
-      },
-      {
-        id: 'd3rs4',
-        name: 'Debugging',
-        image:
-          'https://www.elprocus.com/wp-content/uploads/Featured-image-2.png',
-      },
-    ],
   },
   {
     id: 'd6',
@@ -68,20 +24,6 @@ export const DATA: Domain[] = [
       'https://www.raghwendra.com/blog/wp-content/uploads/2022/08/android-ios-mobile-app-development-company-in-india.jpg',
     description:
       'Mobile application development is the process of creating software applications that run on a mobile device, and a typical mobile application utilizes a network connection to work with remote computing resources',
-    related_skills: [
-      {
-        id: 'd6rs1',
-        name: 'React Native',
-        image:
-          'https://www.appcoda.com/wp-content/uploads/2015/04/react-native.png',
-      },
-      {
-        id: 'd6rs2',
-        name: 'flutter development',
-        image:
-          'https://play-lh.googleusercontent.com/5e7z5YCt7fplN4qndpYzpJjYmuzM2WSrfs35KxnEw-Ku1sClHRWHoIDSw3a3YS5WpGcI=w240-h480-rw',
-      },
-    ],
   },
   {
     id: 'd2',
@@ -90,32 +32,6 @@ export const DATA: Domain[] = [
       'https://bigwater.consulting/wp-content/uploads/2019/04/SDLC_BWC.png',
     description:
       'Software development refers to a set of computer science activities dedicated to the process of creating, designing, deploying and supporting software. Software itself is the set of instructions or programs that tell a computer what to do.',
-    related_skills: [
-      {
-        id: 'd2rs1',
-        name: 'C',
-        image:
-          'https://assets.toptal.io/images?url=https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1129776/regular_1708x683_cover-0828_AfterAllTheseYearstheWorldisStillPoweredbyCProgramming_Razvan_Newsletter-2b9ea38294bb08c5aea1f0c1cb06732f.png',
-      },
-      {
-        id: 'd2rs2',
-        name: 'C++',
-        image:
-          'https://www.analyticsinsight.net/wp-content/uploads/2022/03/bh1-1024x725-1.jpg',
-      },
-      {
-        id: 'd2rs3',
-        name: 'Java',
-        image:
-          'https://www.webskittersacademy.in/wp-content/uploads/2016/01/Java-As-A-Programming-Language-825x410.png',
-      },
-      {
-        id: 'd2rs4',
-        image:
-          'https://cdn.britannica.com/83/146383-050-62A38BCD/Green-tree-python.jpg',
-        name: 'Python',
-      },
-    ],
   },
   {
     id: 'd13',
@@ -123,20 +39,6 @@ export const DATA: Domain[] = [
     image: 'https://tint.edu.in/images/aiml/aiml01.jpg',
     description:
       'Its the process of using mathematical models of data to help a computer learn without direct instruction. ',
-    related_skills: [
-      {
-        id: 'd13rs1',
-        name: 'Artificial intelligence',
-        image:
-          'https://www.simplilearn.com/ice9/free_resources_article_thumb/Advantages_and_Disadvantages_of_artificial_intelligence.jpg',
-      },
-      {
-        id: 'd13rs2',
-        name: 'Machine Learning',
-        image:
-          'https://builtin.com/sites/www.builtin.com/files/styles/og/public/2021-12/machine-learning-examples-applications.png',
-      },
-    ],
   },
   {
     id: 'd11',
@@ -145,22 +47,125 @@ export const DATA: Domain[] = [
       'https://media.istockphoto.com/id/1297564630/vector/game-dev-isometric-concept-education-of-creation-3d-design-of-location-or-level-computer.jpg?s=612x612&w=0&k=20&c=NuOH1Hfd3Y-DJtqwc9bafZEjrifMs47rdr4Zw1nGV3g=',
     description:
       'Its the process of using mathematical models of data to help a computer learn without direct instruction. ',
-    related_skills: [
-      {
-        id: 'd11rs1',
-        name: 'Unity',
-        image: 'https://unity3d.com/files/images/ogimg.jpg',
-      },
-      {
-        id: 'd11rs2',
-        name: 'Unreal Engine',
-        image:
-          'https://cdn2.unrealengine.com/ue-logo-1400x788-1400x788-8f185e1e3635.jpg',
-      },
-    ],
   },
 ];
-
+export const RELATED_SKILLS: RelatedSkill[] = [
+  {
+    domain_id: 'd1',
+    id: 'd1rs1',
+    name: 'HTML',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpngGRjYX1ca7qAADU3K6eGLj7ShQE3L2otdzfryl_Y9Ht2QRoQKYQbsXd36XIxMbYOw0&usqp=CAU',
+  },
+  {
+    domain_id: 'd1',
+    id: 'd1rs2',
+    name: 'Java Script',
+    image:
+      'https://sllearnengine.blob.core.windows.net/material-images/087a9b79a3094d4382bcdbfdb6718734-JS_1.png',
+  },
+  {
+    domain_id: 'd1',
+    id: 'd1rs3',
+    name: 'CSS',
+    image: 'https://cdn-icons-png.flaticon.com/512/919/919826.png',
+  },
+  {
+    domain_id: 'd3',
+    id: 'd3rs1',
+    name: 'Ethical Hacking',
+    image:
+      'https://img.freepik.com/free-vector/cyber-security-concept_23-2148532223.jpg',
+  },
+  {
+    domain_id: 'd3',
+    id: 'd3rs2',
+    name: 'Bug Bounty',
+    image:
+      'https://www.shutterstock.com/image-vector/bug-shield-security-flat-sign-260nw-489707539.jpg',
+  },
+  {
+    domain_id: 'd3',
+    id: 'd3rs3',
+    name: 'Digital Forensics',
+    image: 'https://www.ecpi.edu/sites/default/files/ECPI%20July%2029.png',
+  },
+  {
+    domain_id: 'd3',
+    id: 'd3rs4',
+    name: 'Debugging',
+    image: 'https://www.elprocus.com/wp-content/uploads/Featured-image-2.png',
+  },
+  {
+    domain_id: 'd6',
+    id: 'd6rs1',
+    name: 'React Native',
+    image:
+      'https://www.appcoda.com/wp-content/uploads/2015/04/react-native.png',
+  },
+  {
+    domain_id: 'd6',
+    id: 'd6rs2',
+    name: 'flutter development',
+    image:
+      'https://play-lh.googleusercontent.com/5e7z5YCt7fplN4qndpYzpJjYmuzM2WSrfs35KxnEw-Ku1sClHRWHoIDSw3a3YS5WpGcI=w240-h480-rw',
+  },
+  {
+    domain_id: 'd2',
+    id: 'd2rs1',
+    name: 'C',
+    image:
+      'https://assets.toptal.io/images?url=https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1129776/regular_1708x683_cover-0828_AfterAllTheseYearstheWorldisStillPoweredbyCProgramming_Razvan_Newsletter-2b9ea38294bb08c5aea1f0c1cb06732f.png',
+  },
+  {
+    domain_id: 'd2',
+    id: 'd2rs2',
+    name: 'C++',
+    image:
+      'https://www.analyticsinsight.net/wp-content/uploads/2022/03/bh1-1024x725-1.jpg',
+  },
+  {
+    domain_id: 'd2',
+    id: 'd2rs3',
+    name: 'Java',
+    image:
+      'https://www.webskittersacademy.in/wp-content/uploads/2016/01/Java-As-A-Programming-Language-825x410.png',
+  },
+  {
+    domain_id: 'd2',
+    id: 'd2rs4',
+    image:
+      'https://cdn.britannica.com/83/146383-050-62A38BCD/Green-tree-python.jpg',
+    name: 'Python',
+  },
+  {
+    domain_id: 'd13',
+    id: 'd13rs1',
+    name: 'Artificial intelligence',
+    image:
+      'https://www.simplilearn.com/ice9/free_resources_article_thumb/Advantages_and_Disadvantages_of_artificial_intelligence.jpg',
+  },
+  {
+    domain_id: 'd13',
+    id: 'd13rs2',
+    name: 'Machine Learning',
+    image:
+      'https://builtin.com/sites/www.builtin.com/files/styles/og/public/2021-12/machine-learning-examples-applications.png',
+  },
+  {
+    domain_id: 'd11',
+    id: 'd11rs1',
+    name: 'Unity',
+    image: 'https://unity3d.com/files/images/ogimg.jpg',
+  },
+  {
+    domain_id: 'd11',
+    id: 'd11rs2',
+    name: 'Unreal Engine',
+    image:
+      'https://cdn2.unrealengine.com/ue-logo-1400x788-1400x788-8f185e1e3635.jpg',
+  },
+];
 export const SKILLS_DETAILS: SkillType[] = [
   {
     id: 'd1rs1',
@@ -581,777 +586,754 @@ export const MASTERS: Master[] = [
   },
 ];
 
-export const HOW_TO_LEARN: HowToLearnArray[] = [
+export const HOW_TO_LEARN: HowToLearn[] = [
   {
-    id: 'd1rs1',
-    how_to_learn: [
-      {
-        id: 'd1rs1htl1',
-        name: 'HTML Tutorial',
-        image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpngGRjYX1ca7qAADU3K6eGLj7ShQE3L2otdzfryl_Y9Ht2QRoQKYQbsXd36XIxMbYOw0&usqp=CAU',
-        link: 'https://www.w3schools.com/html/',
-        platform: 'w3schools',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd1rs1htl2',
-        name: 'HTML, CSS, and Javascript for Web Developers',
-        image:
-          'https://play-lh.googleusercontent.com/RslBy1o2NEBYUdRjQtUqLbN-ZM2hpks1mHPMiHMrpAuLqxeBPcFSAjo65nQHbTA53YYn',
-        link: 'https://in.coursera.org/learn/html-css-javascript-for-web-developers',
-        platform: 'w3schools',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd1rs1htl3',
-        name: 'HTML, CSS, and Javascript for Web Developers',
-        image:
-          'https://play-lh.googleusercontent.com/RslBy1o2NEBYUdRjQtUqLbN-ZM2hpks1mHPMiHMrpAuLqxeBPcFSAjo65nQHbTA53YYn',
-        link: 'https://www.udemy.com/course/1-hour-html/',
-        platform: 'w3schools',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd1rs1htl4',
-        name: 'Learn HTML',
-        image: 'https://cdn-icons-png.flaticon.com/512/888/888859.png',
-        link: 'https://www.codecademy.com/learn/learn-html',
-        platform: 'codecademy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd1rs1htl5',
-        name: 'HTML tutorial',
-        image:
-          'https://cdn3d.iconscout.com/3d/free/thumb/html-5728485-4781249.png',
-        link: 'https://youtu.be/qz0aGYrrlhU',
-        platform: 'codecademy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd1rs1',
+    id: 'd1rs1htl1',
+    name: 'HTML Tutorial',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpngGRjYX1ca7qAADU3K6eGLj7ShQE3L2otdzfryl_Y9Ht2QRoQKYQbsXd36XIxMbYOw0&usqp=CAU',
+    link: 'https://www.w3schools.com/html/',
+    platform: 'w3schools',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
   {
-    id: 'd1rs2',
-    how_to_learn: [
-      {
-        id: 'd1rs2htl1',
-        name: 'JavaScript for Beginners Specialization',
-        image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpngGRjYX1ca7qAADU3K6eGLj7ShQE3L2otdzfryl_Y9Ht2QRoQKYQbsXd36XIxMbYOw0&usqp=CAU',
-        link: 'https://in.coursera.org/specializations/javascript-beginner',
-        platform: 'w3schools',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd1rs2htl2',
-        name: 'Javascript for Beginners',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
-        link: 'https://www.udemy.com/course/beginning-javascript/',
-        platform: 'udemy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd1rs2htl3',
-        name: 'JavaScript for Beginners Specialization',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
-        link: 'https://in.coursera.org/specializations/javascript-beginner',
-        platform: 'Coursera',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd1rs2htl4',
-        name: 'JavaScript Tutorials and Courses',
-        image: 'https://www.w3schools.com/whatis/img_js.png',
-        link: 'https://www.edx.org/course/javascript-introduction',
-        platform: 'edx',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd1rs2htl5',
-        name: 'Learn JavaScript',
-        image:
-          'https://blog.logrocket.com/wp-content/uploads/2020/12/javascript-custom-events.png',
-        link: 'https://www.codecademy.com/learn/introduction-to-javascript',
-        platform: 'edx',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd1rs1',
+    id: 'd1rs1htl2',
+    name: 'HTML, CSS, and Javascript for Web Developers',
+    image:
+      'https://play-lh.googleusercontent.com/RslBy1o2NEBYUdRjQtUqLbN-ZM2hpks1mHPMiHMrpAuLqxeBPcFSAjo65nQHbTA53YYn',
+    link: 'https://in.coursera.org/learn/html-css-javascript-for-web-developers',
+    platform: 'w3schools',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
   {
-    id: 'd1rs3',
-    how_to_learn: [
-      {
-        id: 'd1rs3htl1',
-        name: 'CSS Tutorial',
-        image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpngGRjYX1ca7qAADU3K6eGLj7ShQE3L2otdzfryl_Y9Ht2QRoQKYQbsXd36XIxMbYOw0&usqp=CAU',
-        link: 'https://www.w3schools.com/css/',
-        platform: 'w3schools',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd1rs3htl2',
-        name: 'Introduction to CSS3',
-        image:
-          'https://play-lh.googleusercontent.com/RslBy1o2NEBYUdRjQtUqLbN-ZM2hpks1mHPMiHMrpAuLqxeBPcFSAjo65nQHbTA53YYn',
-        link: 'https://www.coursera.org/learn/introcss?utm_medium=institutions&utm_source=umich&utm_campaign=adwords-web-design-for-everybody-introduction-to-CSS3&utm_term=%2Bcss%20%2Bonline%20%2Bcourse&gclid=CjwKCAiA0JKfBhBIEiwAPhZXDz5O-YbEuC0FmvbHgFCl0fv0o-pqaDjVUtIwX603fTYmvvyHVly--hoCQEAQAvD_BwE',
-        platform: 'coursera',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd1rs3htl3',
-        name: 'HTML, CSS, and Javascript for Web Developers',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png',
-        link: 'https://www.youtube.com/watch?v=ToFbsYtf0Yc',
-        platform: 'The Brainstormer',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd1rs3htl4',
-        name: 'CSS Basics',
-        image:
-          'https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png',
-        link: 'https://www.edx.org/course/css-basics',
-        platform: 'Edx',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd1rs3htl5',
-        name: 'CSS, Sass, Bootstrap - Beginner to Expert + Bootcamp',
-        image:
-          'https://camo.githubusercontent.com/edc736634dd35b0f4008e2f7db456136b9fc0e1e7a4078bb72c7352b1bdf8a7e/68747470733a2f2f776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f6373732d332e737667',
-        link: 'https://www.udemy.com/course/html-css-sass-bootstrap-beginner-to-expert-bootcamp/?referralCode=1196FB265EFCA92A22C3&gclid=CjwKCAiA0JKfBhBIEiwAPhZXD0uDTCkq8ejk2kLZJYVhqqtOUYBzAp8hz-3-_TfzHWJRE8jFn7dC7hoCeDUQAvD_BwE',
-        platform: 'udemy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd1rs1',
+    id: 'd1rs1htl3',
+    name: 'HTML, CSS, and Javascript for Web Developers',
+    image:
+      'https://play-lh.googleusercontent.com/RslBy1o2NEBYUdRjQtUqLbN-ZM2hpks1mHPMiHMrpAuLqxeBPcFSAjo65nQHbTA53YYn',
+    link: 'https://www.udemy.com/course/1-hour-html/',
+    platform: 'w3schools',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
   {
-    id: 'd3rs1',
-    how_to_learn: [
-      {
-        id: 'd3rs1htl1',
-        name: 'Ethical Hacking Tutorial',
-        image:
-          'https://cdn-images-1.medium.com/max/2600/1*92D2e9qYmbJ_3bFabHL7cg.png',
-        link: '',
-        platform: 'udemy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd3rs1htl2',
-        name: 'Ethical Hacking Tutorial',
-        image:
-          'https://4.bp.blogspot.com/-HiRSrmQuVTI/XA9a0uU5fzI/AAAAAAAA6_0/RIq3W2EeRxY_OXWF0Pg2Bk8oao_pNa38QCLcBGAs/s1600/what-you-need-to-know-about-ethical-hacking-simplilearn-cover-image.jpg',
-        link: 'https://alison.com/course/ethical-hacker?utm_source=bing&utm_medium=cpc&utm_campaign=436347242&utm_content=1364495706300223&utm_term=kwd-85282119770410:loc-90&msclkid=8e8cfe8d1dc1132737509d68395bed71',
-        platform: 'Alison',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd3rs1htl3',
-        name: 'Ethical Hacking Tutorial',
-        image:
-          'https://img.sheroes.in/tr:w-790/img/uploads/article/high_res/15495365261549536526.png',
-        link: 'https://www.theknowledgeacademy.com/in/offers/ethical-hacking-professional-certification-training-courses/?utm_term=Ethical%20Hacking%20Professional%20Course&utm_campaign=%5BHacking+Professional%5D%5BIN%5D&utm_source=adwords&utm_medium=ppc&hsa_acc=9865744776&hsa_cam=16008741256&hsa_grp=1306220177402330&hsa_ad=&hsa_src=o&hsa_tgt=kwd-81638950987024:loc-90&hsa_kw=Ethical%20Hacking%20Professional%20Course&hsa_mt=p&hsa_net=adwords&hsa_ver=3&utm_content=%5BHacking%20Professional%5D%5BCourse%5D',
-        platform: 'theknowledgeacademy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd3rs1htl4',
-        name: 'Ethical Hacking Tutorial',
-        image:
-          'https://th.bing.com/th/id/OIP.-jiCm5IczhE4xYNnbTd-uAHaEi?pid=ImgDet&rs=1',
-        link: 'https://www.eccouncil.org/certified-ethical-hacker-course/',
-        platform: 'eccouncil',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd3rs1htl5',
-        name: 'Ethical Hacking Tutorial',
-        image:
-          'https://dwnk32xmy75f1.cloudfront.net/wp-content/uploads/20190902065731/5.jpg',
-        link: 'https://www.coursera.org/learn/hacking-patching?irclickid=TgISrb1yoxyNTC4xfs2CWyM-UkA3IY2hqRKmWw0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=2890636&utm_content=b2c',
-        platform: 'coursera',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd1rs1',
+    id: 'd1rs1htl4',
+    name: 'Learn HTML',
+    image: 'https://cdn-icons-png.flaticon.com/512/888/888859.png',
+    link: 'https://www.codecademy.com/learn/learn-html',
+    platform: 'codecademy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
   {
-    id: 'd3rs2',
-    how_to_learn: [
-      {
-        id: 'd3rs2htl1',
-        name: 'Recon for bug bounty, penetration testers & ethical hackers',
-        image:
-          'https://th.bing.com/th/id/OIP.e1CAN9QpQcsktY-n2vhNHAHaD4?pid=ImgDet&rs=1',
-        link: 'https://www.udemy.com/course/recon-for-bug-bounty-penetration-testers-ethical-hackers/',
-        platform: 'udemy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd3rs2htl1',
-        name: 'Learn Bug Bounty Hunting & Web Security Testing From Scratch',
-        image:
-          'https://th.bing.com/th/id/OIP.IsX25RGEfXUlvnwCwLmsCQHaE8?pid=ImgDet&rs=1',
-        link: 'https://www.udemy.com/course/learn-bug-bounty-hunting-web-security-testing-from-scratch/',
-        platform: 'udemy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd3rs2htl1',
-        name: 'BUG BOUNTY TRAINING IN HYDERABAD',
-        image:
-          'https://th.bing.com/th/id/OIP.nZPc4iFnkoNXHs64mzAgFgHaEH?pid=ImgDet&w=800&h=445&rs=1',
-        link: 'https://www.nexsonit.com/trainings/bug-bounty-training/',
-        platform: 'nexsonit',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd3rs2htl1',
-        name: 'Bug Bounty Hunter',
-        image:
-          'https://1.bp.blogspot.com/-FFeVPweevLY/X2LfKVOPS9I/AAAAAAAAAXA/u0QArT4cpfkTdenQSUTyPsK0hjB-ovklwCLcBGAsYHQ/w1200-h630-p-k-no-nu/bug.png',
-        link: 'https://www.classcentral.com/course/independent-bugbountyhunter-102529',
-        platform: 'classcentral',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd3rs2htl1',
-        name: 'The Bug Hunters Methodology',
-        image:
-          'https://ncybersecurity.com/wp-content/uploads/2020/06/bug-bounty-course.png',
-        link: 'https://www.classcentral.com/course/youtube-the-bug-hunter-s-methodology-102530',
-        platform: 'classcentral',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd1rs1',
+    id: 'd1rs1htl5',
+    name: 'HTML tutorial',
+    image: 'https://cdn3d.iconscout.com/3d/free/thumb/html-5728485-4781249.png',
+    link: 'https://youtu.be/qz0aGYrrlhU',
+    platform: 'codecademy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
   {
-    id: 'd3rs3',
-    how_to_learn: [
-      {
-        id: 'd3rs2htl1',
-        name: 'Certificate in Digital Forensics with Kali Linux',
-        image:
-          'https://empmonitor.com/blog/wp-content/uploads/2020/04/digital-forensics-2.jpg',
-        link: 'https://www.careers360.com/courses-certifications/vskills-certificate-in-digital-forensics-kali-linux-course',
-        platform: 'careers360',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd3rs2htl1',
-        name: 'Computer Forensics at RIT',
-        image:
-          'https://th.bing.com/th/id/OIP.1XnidoPnqpFYJ99MFwVzUgHaEK?pid=ImgDet&w=980&h=551&rs=1',
-        link: 'https://www.careers360.com/university/rochester-institute-of-technology-rochester/computer-forensics-certification-course',
-        platform: 'careers360',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd3rs2htl1',
-        name: 'IFCI Expert Cybercrime Investigators Course',
-        image:
-          'https://interworks.com/wp-content/uploads/sites/default/files/blog-content/forensics.jpg',
-        link: 'https://www.udemy.com/course/ifci-expert-cybercrime-investigators-course/?matchtype=e&msclkid=581ffe23345c1a43e5e99dc606872286&utm_campaign=BG-LongTail_la.EN_cc.INDIA&utm_content=deal4584&utm_medium=udemyads&utm_source=bing&utm_term=._ag_1214960761641383.ad._kw_Digital+Forensics+Course.de_c.dm._pl._ti_kwd-75935386650777%3Aloc-90.li_158046.pd_._',
-        platform: 'udemy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd3rs2htl1',
-        name: 'Free Online Computer Forensics Courses',
-        image:
-          'https://th.bing.com/th/id/OIP.UNSfR0qWxSY7J9m5IuB7DAHaE8?pid=ImgDet&rs=1',
-        link: 'https://alison.com/tag/computer-forensics',
-        platform: 'alison',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd3rs2htl1',
-        name: 'Digital Forensics Essentials',
-        image: 'https://i.ytimg.com/vi/ZUqzcQc_syE/maxresdefault.jpg',
-        link: 'https://www.sans.org/cyber-security-courses/digital-forensics-essentials/',
-        platform: 'classcentral',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd1rs2',
+    id: 'd1rs2htl1',
+    name: 'JavaScript for Beginners Specialization',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpngGRjYX1ca7qAADU3K6eGLj7ShQE3L2otdzfryl_Y9Ht2QRoQKYQbsXd36XIxMbYOw0&usqp=CAU',
+    link: 'https://in.coursera.org/specializations/javascript-beginner',
+    platform: 'w3schools',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
   {
-    id: 'd3rs4',
-    how_to_learn: [
-      {
-        id: 'd3rs2htl1',
-        name: 'Eclipse Debugging Techniques And Tricks',
-        image:
-          'https://th.bing.com/th/id/OIP.SVFH5MzPh_136Hj_6_13pgHaEy?pid=ImgDet&rs=1',
-        link: 'https://www.udemy.com/course/eclipse-debugging-techniques-and-tricks/?matchtype=e&msclkid=13807a7bf203141bbb37199ec45fd0b2&utm_campaign=BG-LongTail_la.EN_cc.INDIA&utm_content=deal4584&utm_medium=udemyads&utm_source=bing&utm_term=._ag_1221557831786173.ad._kw_Debugging+Course.de_c.dm._pl._ti_kwd-76347700899011%3Aloc-90.li_158046.pd_._',
-        platform: 'udemy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd3rs2htl1',
-        name: 'SAP Debugging for Functional Consultants',
-        image:
-          'https://www.pixafy.com/wp-content/uploads/2013/02/top-debugging-tips.jpg',
-        link: 'https://www.udemy.com/course/sap-abap-debugging-for-functional-consultants/?ranMID=39197&ranEAID=k*VTdGlCbXg&ranSiteID=k.VTdGlCbXg-dD7knG.McsSTzKxvXoCLgA&LSNPUBID=k*VTdGlCbXg&utm_source=aff-campaign&utm_medium=udemyads',
-        platform: 'udemy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd3rs2htl1',
-        name: 'Ultimate Guide to Debugging in Unity',
-        image:
-          'https://www.technokids.com/blog/wp-content/uploads/2020/01/teach-debugging.png',
-        link: 'https://www.udemy.com/course/ultimate-guide-to-debugging-in-unity/?ranMID=39197&ranEAID=k*VTdGlCbXg&ranSiteID=k.VTdGlCbXg-Q_s.FBRGkwybEK0jWUm6jQ&LSNPUBID=k*VTdGlCbXg&utm_source=aff-campaign&utm_medium=udemyads',
-        platform: 'udemy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd3rs2htl1',
-        name: 'OllyDBG for Beginners (olly debug)',
-        image:
-          'https://th.bing.com/th/id/OIP.jOF5I3nVvvx0ig1InS49kAHaEr?pid=ImgDet&rs=1',
-        link: 'https://www.udemy.com/course/ollydbg-for-beginners/?ranMID=39197&ranEAID=k*VTdGlCbXg&ranSiteID=k.VTdGlCbXg-VPgp4NLVqPEHksQxtFwMFA&LSNPUBID=k*VTdGlCbXg&utm_source=aff-campaign&utm_medium=udemyads',
-        platform: 'udemy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd3rs2htl1',
-        name: 'Troubleshooting and Debugging Techniques',
-        image:
-          'https://www.expertappdevs.com/sitebucket/blog/20210105120407_11_Debugging_react_native.jpg',
-        link: 'https://www.coursera.org/learn/troubleshooting-debugging-techniques',
-        platform: 'coursera',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd1rs2',
+    id: 'd1rs2htl2',
+    name: 'Javascript for Beginners',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
+    link: 'https://www.udemy.com/course/beginning-javascript/',
+    platform: 'udemy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
   {
-    id: 'd6rs1',
-    how_to_learn: [
-      {
-        id: 'd6rs1htl1',
-        name: 'Learn React Native',
-        image:
-          'https://www.appcoda.com/wp-content/uploads/2015/04/react-native.png',
-        link: 'https://www.codecademy.com/learn/learn-react-native',
-        platform: 'cODECademy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd6rs1htl2',
-        name: 'Create your first React Native App',
-        image:
-          'https://play-lh.googleusercontent.com/RslBy1o2NEBYUdRjQtUqLbN-ZM2hpks1mHPMiHMrpAuLqxeBPcFSAjo65nQHbTA53YYn',
-        link: 'https://www.udemy.com/course/create-your-first-react-native-app/',
-        platform: 'Udemy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd6rs1htl3',
-        name: ' React native complete guide 2023',
-        image:
-          'https://openwebsolutions.in/blog/wp-content/uploads/2019/07/React-Native-Titre.png',
-        link: 'https://www.udemy.com/course/react-native-full-guide/',
-        platform: 'Udemy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd6rs1htl4',
-        name: 'React Native',
-        image:
-          'https://www.devteam.space/wp-content/uploads/2021/11/How-to-Build-a-Mobile-App-With-React-Native.jpg',
-        link: 'https://in.coursera.org/learn/react-native-course',
-        platform: 'Coursera',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd1rs2',
+    id: 'd1rs2htl3',
+    name: 'JavaScript for Beginners Specialization',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
+    link: 'https://in.coursera.org/specializations/javascript-beginner',
+    platform: 'Coursera',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
   {
-    id: 'd6rs2',
-    how_to_learn: [
-      {
-        id: 'd6rs2htl1',
-        name: 'flutter&dart',
-        image:
-          'https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png',
-        link: 'https://www.udemy.com/course/flutter-dart-the-complete-flutter-app-development-course/',
-        platform: 'Udemy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd6rs2htl2',
-        name: 'Introduction to flutter course online',
-        image:
-          'https://play-lh.googleusercontent.com/5e7z5YCt7fplN4qndpYzpJjYmuzM2WSrfs35KxnEw-Ku1sClHRWHoIDSw3a3YS5WpGcI',
-        link: 'https://www.simplilearn.com/free-flutter-foundation-course-skillup',
-        platform: 'skillup',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd6rs2htl3',
-        name: 'Become Flutter deveoper ',
-        image:
-          'https://blog.logrocket.com/wp-content/uploads/2022/02/Best-IDEs-Flutter-2022.png',
-        link: 'https://fluttercrashcourse.com/',
-        platform: 'Flutter crash course',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd1rs2',
+    id: 'd1rs2htl4',
+    name: 'JavaScript Tutorials and Courses',
+    image: 'https://www.w3schools.com/whatis/img_js.png',
+    link: 'https://www.edx.org/course/javascript-introduction',
+    platform: 'edx',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
   {
-    id: 'd2rs1',
-    how_to_learn: [
-      {
-        id: 'd2rs1htl1',
-        name: 'C Programming Language Tutorial',
-        image:
-          'https://raw.githubusercontent.com/github/explore/f3e22f0dca2be955676bc70d6214b95b13354ee8/topics/c/c.png',
-        link: 'https://www.javatpoint.com/c-programming-language-tutorial',
-        platform: 'Javatpoint',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd2rs1htl2',
-        name: 'Learn C Programming Basic',
-        image:
-          'https://www.pragimtech.com/wp-content/uploads/2020/03/c-tutorial-for-beginners.png',
-        link: 'https://www.programiz.com/c-programming',
-        platform: 'Programiz',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd2rs1htl3',
-        name: 'C Tutorial',
-        image: 'https://contentstatic.techgig.com/photo/90325682.cms',
-        link: 'https://www.tutorialspoint.com/cprogramming/index.htm',
-        platform: 'Tutorialspoint',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd1rs2',
+    id: 'd1rs2htl5',
+    name: 'Learn JavaScript',
+    image:
+      'https://blog.logrocket.com/wp-content/uploads/2020/12/javascript-custom-events.png',
+    link: 'https://www.codecademy.com/learn/introduction-to-javascript',
+    platform: 'edx',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
   {
-    id: 'd2rs2',
-    how_to_learn: [
-      {
-        id: 'd2rs2htl1',
-        name: 'C++ Tutorial',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png',
-        link: 'https://www.w3schools.com/cpp/cpp_intro.asp',
-        platform: 'w3schools',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd2rs2htl1',
-        name: 'C++ Programming Language',
-        image:
-          'https://www.simplilearn.com/ice9/free_resources_article_thumb/C%2B%2B-vs-Java-C%2B%2B.png',
-        link: 'https://www.geeksforgeeks.org/c-plus-plus/',
-        platform: 'geeksforgeeks',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd2rs2htl1',
-        name: 'C++ Programming Language',
-        image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrysoq6-N41zWJZZMSvYEvlVhnjsImArdYEg&usqp=CAU',
-        link: 'https://www.youtube.com/watch?v=30FUY4aRk4k',
-        platform: 'YouTube',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd1rs3',
+    id: 'd1rs3htl1',
+    name: 'CSS Tutorial',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpngGRjYX1ca7qAADU3K6eGLj7ShQE3L2otdzfryl_Y9Ht2QRoQKYQbsXd36XIxMbYOw0&usqp=CAU',
+    link: 'https://www.w3schools.com/css/',
+    platform: 'w3schools',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
   {
-    id: 'd2rs3',
-    how_to_learn: [
-      {
-        id: 'd2rs2htl1',
-        name: 'Java Tutorial',
-        image:
-          'https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg',
-        link: 'https://www.w3schools.com/java/',
-        platform: 'w3schools',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd2rs2htl1',
-        name: 'Basic Java',
-        image:
-          'https://www.simplilearn.com/ice9/free_resources_article_thumb/C%2B%2B-vs-Java-C%2B%2B.png',
-        link: 'https://www.javatpoint.com/java-tutorial',
-        platform: 'javatpoint',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd2rs2htl1',
-        name: 'Java Video Tutorial',
-        image:
-          'https://www.oracle.com/oce/press/assets/CONT6C95347B9ECC40CF8E7272A74FD80BDE/native/rc24-java-logo.gif',
-        link: 'https://www.youtube.com/playlist?list=PLE7E8B7F4856C9B19',
-        platform: 'YouTube',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd1rs3',
+    id: 'd1rs3htl2',
+    name: 'Introduction to CSS3',
+    image:
+      'https://play-lh.googleusercontent.com/RslBy1o2NEBYUdRjQtUqLbN-ZM2hpks1mHPMiHMrpAuLqxeBPcFSAjo65nQHbTA53YYn',
+    link: 'https://www.coursera.org/learn/introcss?utm_medium=institutions&utm_source=umich&utm_campaign=adwords-web-design-for-everybody-introduction-to-CSS3&utm_term=%2Bcss%20%2Bonline%20%2Bcourse&gclid=CjwKCAiA0JKfBhBIEiwAPhZXDz5O-YbEuC0FmvbHgFCl0fv0o-pqaDjVUtIwX603fTYmvvyHVly--hoCQEAQAvD_BwE',
+    platform: 'coursera',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
   {
-    id: 'd2rs4',
-    how_to_learn: [
-      {
-        id: 'd2rs2htl1',
-        name: 'Python Tutorial',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png',
-        link: 'https://www.w3schools.com/python/',
-        platform: 'w3schools',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd2rs2htl1',
-        name: 'Basic Python',
-        image:
-          'https://cdn.rebrickable.com/media/thumbs/mocs/moc-91667.jpg/1000x800.jpg',
-        link: 'https://www.javatpoint.com/java-tutorial',
-        platform: 'Tutorialspoint',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd2rs2htl1',
-        name: 'Python Video Tutorial',
-        image:
-          'https://cdn.rebrickable.com/media/thumbs/mocs/moc-91667.jpg/1000x800.jpg',
-        link: 'https://www.youtube.com/playlist?list=PLWKjhJtqVAbnqBxcdjVGgT3uVR10bzTEB',
-        platform: 'YouTube',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd1rs3',
+    id: 'd1rs3htl3',
+    name: 'HTML, CSS, and Javascript for Web Developers',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png',
+    link: 'https://www.youtube.com/watch?v=ToFbsYtf0Yc',
+    platform: 'The Brainstormer',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
   {
-    id: 'd13rs1',
-    how_to_learn: [
-      {
-        id: 'd13rs1htl1',
-        name: 'Introduction to Artificial Intelligence (AI)',
-        image:
-          'https://www.simplilearn.com/ice9/free_resources_article_thumb/Why-get-certified-in-Artificial-Intelligence.jpg',
-        link: 'https://in.coursera.org/learn/introduction-to-ai',
-        platform: 'coursera',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd13rs1htl2',
-        name: 'Artificial Intelligence',
-        image:
-          'https://i0.wp.com/bdtechtalks.com/wp-content/uploads/2020/05/robot-thinking.jpg?fit=3558%2C2092&ssl=1',
-        link: 'https://www.classcentral.com/report/best-ai-courses/',
-        platform: 'classcentral',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd13rs1htl3',
-        name: 'Artificial Intelligence I: Meta-Heuristics',
-        image:
-          'https://www.srimax.com/wp-content/uploads/2020/01/Importance-of-Artificial-Intelligence.jpeg',
-        link: 'https://www.udemy.com/course/artificial-intelligence-games-in-java/',
-        platform: 'Udemy',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd1rs3',
+    id: 'd1rs3htl4',
+    name: 'CSS Basics',
+    image:
+      'https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png',
+    link: 'https://www.edx.org/course/css-basics',
+    platform: 'Edx',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
   {
-    id: 'd13rs2',
-    how_to_learn: [
-      {
-        id: 'd13rs2htl1',
-        name: 'Machine Learning Specialization',
-        image:
-          'https://innovationatwork.ieee.org/wp-content/uploads/2021/02/bigstock-Human-Brain-d-Illustration-D-288314977_1024X684.png',
-        link: 'https://www.coursera.org/specializations/machine-learning-introduction',
-        platform: 'Coursera',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd13rs2htl2',
-        name: 'Machine Learning Basics',
-        image: 'https://miro.medium.com/max/1400/1*c_fiB-YgbnMl6nntYGBMHQ.jpeg',
-        link: 'https://youtu.be/ukzFI9rgwfU',
-        platform: 'Simlilearn',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd13rs2htl3',
-        name: 'machine learning roadmap',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
-        link: 'https://youtu.be/pHiMN_gy9mk',
-        platform: 'Daniel Bourke',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-      {
-        id: 'd13rs2htl4',
-        name: 'Machine Learning',
-        image:
-          'https://blog.integral-system.fr/wp-content/uploads/2020/02/33797061.jpg',
-        link: 'https://youtu.be/GwIo3gDZCVQ',
-        platform: 'edureka',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd1rs3',
+    id: 'd1rs3htl5',
+    name: 'CSS, Sass, Bootstrap - Beginner to Expert + Bootcamp',
+    image:
+      'https://camo.githubusercontent.com/edc736634dd35b0f4008e2f7db456136b9fc0e1e7a4078bb72c7352b1bdf8a7e/68747470733a2f2f776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f6373732d332e737667',
+    link: 'https://www.udemy.com/course/html-css-sass-bootstrap-beginner-to-expert-bootcamp/?referralCode=1196FB265EFCA92A22C3&gclid=CjwKCAiA0JKfBhBIEiwAPhZXD0uDTCkq8ejk2kLZJYVhqqtOUYBzAp8hz-3-_TfzHWJRE8jFn7dC7hoCeDUQAvD_BwE',
+    platform: 'udemy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
   {
-    id: 'd11rs1',
-    how_to_learn: [
-      {
-        id: 'd11rs1htl1',
-        name: 'Introduction to Unity',
-        image: 'https://unity3d.com/files/images/ogimg.jpg',
-        link: 'https://in.coursera.org/learn/introduction-to-ai',
-        platform: 'coursera',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd3rs1',
+    id: 'd3rs1htl1',
+    name: 'Ethical Hacking Tutorial',
+    image:
+      'https://cdn-images-1.medium.com/max/2600/1*92D2e9qYmbJ_3bFabHL7cg.png',
+    link: '',
+    platform: 'udemy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
   {
-    id: 'd11rs2',
-    how_to_learn: [
-      {
-        id: 'd11rs1htl1',
-        name: 'Introduction to Unreal Engine',
-        image: 'https://unity3d.com/files/images/ogimg.jpg',
-        link: 'https://in.coursera.org/learn/introduction-to-ai',
-        platform: 'coursera',
-        created_at: '2020-10-10',
-        description:
-          'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
-      },
-    ],
+    skill_id: 'd3rs1',
+    id: 'd3rs1htl2',
+    name: 'Ethical Hacking Tutorial',
+    image:
+      'https://4.bp.blogspot.com/-HiRSrmQuVTI/XA9a0uU5fzI/AAAAAAAA6_0/RIq3W2EeRxY_OXWF0Pg2Bk8oao_pNa38QCLcBGAs/s1600/what-you-need-to-know-about-ethical-hacking-simplilearn-cover-image.jpg',
+    link: 'https://alison.com/course/ethical-hacker?utm_source=bing&utm_medium=cpc&utm_campaign=436347242&utm_content=1364495706300223&utm_term=kwd-85282119770410:loc-90&msclkid=8e8cfe8d1dc1132737509d68395bed71',
+    platform: 'Alison',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs1',
+    id: 'd3rs1htl3',
+    name: 'Ethical Hacking Tutorial',
+    image:
+      'https://img.sheroes.in/tr:w-790/img/uploads/article/high_res/15495365261549536526.png',
+    link: 'https://www.theknowledgeacademy.com/in/offers/ethical-hacking-professional-certification-training-courses/?utm_term=Ethical%20Hacking%20Professional%20Course&utm_campaign=%5BHacking+Professional%5D%5BIN%5D&utm_source=adwords&utm_medium=ppc&hsa_acc=9865744776&hsa_cam=16008741256&hsa_grp=1306220177402330&hsa_ad=&hsa_src=o&hsa_tgt=kwd-81638950987024:loc-90&hsa_kw=Ethical%20Hacking%20Professional%20Course&hsa_mt=p&hsa_net=adwords&hsa_ver=3&utm_content=%5BHacking%20Professional%5D%5BCourse%5D',
+    platform: 'theknowledgeacademy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs1',
+    id: 'd3rs1htl4',
+    name: 'Ethical Hacking Tutorial',
+    image:
+      'https://th.bing.com/th/id/OIP.-jiCm5IczhE4xYNnbTd-uAHaEi?pid=ImgDet&rs=1',
+    link: 'https://www.eccouncil.org/certified-ethical-hacker-course/',
+    platform: 'eccouncil',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs1',
+    id: 'd3rs1htl5',
+    name: 'Ethical Hacking Tutorial',
+    image:
+      'https://dwnk32xmy75f1.cloudfront.net/wp-content/uploads/20190902065731/5.jpg',
+    link: 'https://www.coursera.org/learn/hacking-patching?irclickid=TgISrb1yoxyNTC4xfs2CWyM-UkA3IY2hqRKmWw0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=2890636&utm_content=b2c',
+    platform: 'coursera',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs2',
+    id: 'd3rs2htl1',
+    name: 'Recon for bug bounty, penetration testers & ethical hackers',
+    image:
+      'https://th.bing.com/th/id/OIP.e1CAN9QpQcsktY-n2vhNHAHaD4?pid=ImgDet&rs=1',
+    link: 'https://www.udemy.com/course/recon-for-bug-bounty-penetration-testers-ethical-hackers/',
+    platform: 'udemy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs2',
+    id: 'd3rs2htl1',
+    name: 'Learn Bug Bounty Hunting & Web Security Testing From Scratch',
+    image:
+      'https://th.bing.com/th/id/OIP.IsX25RGEfXUlvnwCwLmsCQHaE8?pid=ImgDet&rs=1',
+    link: 'https://www.udemy.com/course/learn-bug-bounty-hunting-web-security-testing-from-scratch/',
+    platform: 'udemy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs2',
+    id: 'd3rs2htl1',
+    name: 'BUG BOUNTY TRAINING IN HYDERABAD',
+    image:
+      'https://th.bing.com/th/id/OIP.nZPc4iFnkoNXHs64mzAgFgHaEH?pid=ImgDet&w=800&h=445&rs=1',
+    link: 'https://www.nexsonit.com/trainings/bug-bounty-training/',
+    platform: 'nexsonit',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs2',
+    id: 'd3rs2htl1',
+    name: 'Bug Bounty Hunter',
+    image:
+      'https://1.bp.blogspot.com/-FFeVPweevLY/X2LfKVOPS9I/AAAAAAAAAXA/u0QArT4cpfkTdenQSUTyPsK0hjB-ovklwCLcBGAsYHQ/w1200-h630-p-k-no-nu/bug.png',
+    link: 'https://www.classcentral.com/course/independent-bugbountyhunter-102529',
+    platform: 'classcentral',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs2',
+    id: 'd3rs2htl1',
+    name: 'The Bug Hunters Methodology',
+    image:
+      'https://ncybersecurity.com/wp-content/uploads/2020/06/bug-bounty-course.png',
+    link: 'https://www.classcentral.com/course/youtube-the-bug-hunter-s-methodology-102530',
+    platform: 'classcentral',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs3',
+    id: 'd3rs2htl1',
+    name: 'Certificate in Digital Forensics with Kali Linux',
+    image:
+      'https://empmonitor.com/blog/wp-content/uploads/2020/04/digital-forensics-2.jpg',
+    link: 'https://www.careers360.com/courses-certifications/vskills-certificate-in-digital-forensics-kali-linux-course',
+    platform: 'careers360',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs3',
+    id: 'd3rs2htl1',
+    name: 'Computer Forensics at RIT',
+    image:
+      'https://th.bing.com/th/id/OIP.1XnidoPnqpFYJ99MFwVzUgHaEK?pid=ImgDet&w=980&h=551&rs=1',
+    link: 'https://www.careers360.com/university/rochester-institute-of-technology-rochester/computer-forensics-certification-course',
+    platform: 'careers360',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs3',
+    id: 'd3rs2htl1',
+    name: 'IFCI Expert Cybercrime Investigators Course',
+    image:
+      'https://interworks.com/wp-content/uploads/sites/default/files/blog-content/forensics.jpg',
+    link: 'https://www.udemy.com/course/ifci-expert-cybercrime-investigators-course/?matchtype=e&msclkid=581ffe23345c1a43e5e99dc606872286&utm_campaign=BG-LongTail_la.EN_cc.INDIA&utm_content=deal4584&utm_medium=udemyads&utm_source=bing&utm_term=._ag_1214960761641383.ad._kw_Digital+Forensics+Course.de_c.dm._pl._ti_kwd-75935386650777%3Aloc-90.li_158046.pd_._',
+    platform: 'udemy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs3',
+    id: 'd3rs2htl1',
+    name: 'Free Online Computer Forensics Courses',
+    image:
+      'https://th.bing.com/th/id/OIP.UNSfR0qWxSY7J9m5IuB7DAHaE8?pid=ImgDet&rs=1',
+    link: 'https://alison.com/tag/computer-forensics',
+    platform: 'alison',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs3',
+    id: 'd3rs2htl1',
+    name: 'Digital Forensics Essentials',
+    image: 'https://i.ytimg.com/vi/ZUqzcQc_syE/maxresdefault.jpg',
+    link: 'https://www.sans.org/cyber-security-courses/digital-forensics-essentials/',
+    platform: 'classcentral',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs4',
+    id: 'd3rs2htl1',
+    name: 'Eclipse Debugging Techniques And Tricks',
+    image:
+      'https://th.bing.com/th/id/OIP.SVFH5MzPh_136Hj_6_13pgHaEy?pid=ImgDet&rs=1',
+    link: 'https://www.udemy.com/course/eclipse-debugging-techniques-and-tricks/?matchtype=e&msclkid=13807a7bf203141bbb37199ec45fd0b2&utm_campaign=BG-LongTail_la.EN_cc.INDIA&utm_content=deal4584&utm_medium=udemyads&utm_source=bing&utm_term=._ag_1221557831786173.ad._kw_Debugging+Course.de_c.dm._pl._ti_kwd-76347700899011%3Aloc-90.li_158046.pd_._',
+    platform: 'udemy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs4',
+    id: 'd3rs2htl1',
+    name: 'SAP Debugging for Functional Consultants',
+    image:
+      'https://www.pixafy.com/wp-content/uploads/2013/02/top-debugging-tips.jpg',
+    link: 'https://www.udemy.com/course/sap-abap-debugging-for-functional-consultants/?ranMID=39197&ranEAID=k*VTdGlCbXg&ranSiteID=k.VTdGlCbXg-dD7knG.McsSTzKxvXoCLgA&LSNPUBID=k*VTdGlCbXg&utm_source=aff-campaign&utm_medium=udemyads',
+    platform: 'udemy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs4',
+    id: 'd3rs2htl1',
+    name: 'Ultimate Guide to Debugging in Unity',
+    image:
+      'https://www.technokids.com/blog/wp-content/uploads/2020/01/teach-debugging.png',
+    link: 'https://www.udemy.com/course/ultimate-guide-to-debugging-in-unity/?ranMID=39197&ranEAID=k*VTdGlCbXg&ranSiteID=k.VTdGlCbXg-Q_s.FBRGkwybEK0jWUm6jQ&LSNPUBID=k*VTdGlCbXg&utm_source=aff-campaign&utm_medium=udemyads',
+    platform: 'udemy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs4',
+    id: 'd3rs2htl1',
+    name: 'OllyDBG for Beginners (olly debug)',
+    image:
+      'https://th.bing.com/th/id/OIP.jOF5I3nVvvx0ig1InS49kAHaEr?pid=ImgDet&rs=1',
+    link: 'https://www.udemy.com/course/ollydbg-for-beginners/?ranMID=39197&ranEAID=k*VTdGlCbXg&ranSiteID=k.VTdGlCbXg-VPgp4NLVqPEHksQxtFwMFA&LSNPUBID=k*VTdGlCbXg&utm_source=aff-campaign&utm_medium=udemyads',
+    platform: 'udemy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd3rs4',
+    id: 'd3rs2htl1',
+    name: 'Troubleshooting and Debugging Techniques',
+    image:
+      'https://www.expertappdevs.com/sitebucket/blog/20210105120407_11_Debugging_react_native.jpg',
+    link: 'https://www.coursera.org/learn/troubleshooting-debugging-techniques',
+    platform: 'coursera',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd6rs1',
+    id: 'd6rs1htl1',
+    name: 'Learn React Native',
+    image:
+      'https://www.appcoda.com/wp-content/uploads/2015/04/react-native.png',
+    link: 'https://www.codecademy.com/learn/learn-react-native',
+    platform: 'cODECademy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd6rs1',
+    id: 'd6rs1htl2',
+    name: 'Create your first React Native App',
+    image:
+      'https://play-lh.googleusercontent.com/RslBy1o2NEBYUdRjQtUqLbN-ZM2hpks1mHPMiHMrpAuLqxeBPcFSAjo65nQHbTA53YYn',
+    link: 'https://www.udemy.com/course/create-your-first-react-native-app/',
+    platform: 'Udemy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd6rs1',
+    id: 'd6rs1htl3',
+    name: ' React native complete guide 2023',
+    image:
+      'https://openwebsolutions.in/blog/wp-content/uploads/2019/07/React-Native-Titre.png',
+    link: 'https://www.udemy.com/course/react-native-full-guide/',
+    platform: 'Udemy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd6rs1',
+    id: 'd6rs1htl4',
+    name: 'React Native',
+    image:
+      'https://www.devteam.space/wp-content/uploads/2021/11/How-to-Build-a-Mobile-App-With-React-Native.jpg',
+    link: 'https://in.coursera.org/learn/react-native-course',
+    platform: 'Coursera',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd6rs2',
+    id: 'd6rs2htl1',
+    name: 'flutter&dart',
+    image:
+      'https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png',
+    link: 'https://www.udemy.com/course/flutter-dart-the-complete-flutter-app-development-course/',
+    platform: 'Udemy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd6rs2',
+    id: 'd6rs2htl2',
+    name: 'Introduction to flutter course online',
+    image:
+      'https://play-lh.googleusercontent.com/5e7z5YCt7fplN4qndpYzpJjYmuzM2WSrfs35KxnEw-Ku1sClHRWHoIDSw3a3YS5WpGcI',
+    link: 'https://www.simplilearn.com/free-flutter-foundation-course-skillup',
+    platform: 'skillup',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd6rs2',
+    id: 'd6rs2htl3',
+    name: 'Become Flutter deveoper ',
+    image:
+      'https://blog.logrocket.com/wp-content/uploads/2022/02/Best-IDEs-Flutter-2022.png',
+    link: 'https://fluttercrashcourse.com/',
+    platform: 'Flutter crash course',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd2rs1',
+    id: 'd2rs1htl1',
+    name: 'C Programming Language Tutorial',
+    image:
+      'https://raw.githubusercontent.com/github/explore/f3e22f0dca2be955676bc70d6214b95b13354ee8/topics/c/c.png',
+    link: 'https://www.javatpoint.com/c-programming-language-tutorial',
+    platform: 'Javatpoint',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd2rs1',
+    id: 'd2rs1htl2',
+    name: 'Learn C Programming Basic',
+    image:
+      'https://www.pragimtech.com/wp-content/uploads/2020/03/c-tutorial-for-beginners.png',
+    link: 'https://www.programiz.com/c-programming',
+    platform: 'Programiz',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd2rs1',
+    id: 'd2rs1htl3',
+    name: 'C Tutorial',
+    image: 'https://contentstatic.techgig.com/photo/90325682.cms',
+    link: 'https://www.tutorialspoint.com/cprogramming/index.htm',
+    platform: 'Tutorialspoint',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd2rs2',
+    id: 'd2rs2htl1',
+    name: 'C++ Tutorial',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png',
+    link: 'https://www.w3schools.com/cpp/cpp_intro.asp',
+    platform: 'w3schools',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd2rs2',
+    id: 'd2rs2htl1',
+    name: 'C++ Programming Language',
+    image:
+      'https://www.simplilearn.com/ice9/free_resources_article_thumb/C%2B%2B-vs-Java-C%2B%2B.png',
+    link: 'https://www.geeksforgeeks.org/c-plus-plus/',
+    platform: 'geeksforgeeks',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd2rs2',
+    id: 'd2rs2htl1',
+    name: 'C++ Programming Language',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrysoq6-N41zWJZZMSvYEvlVhnjsImArdYEg&usqp=CAU',
+    link: 'https://www.youtube.com/watch?v=30FUY4aRk4k',
+    platform: 'YouTube',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd2rs3',
+    id: 'd2rs2htl1',
+    name: 'Java Tutorial',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg',
+    link: 'https://www.w3schools.com/java/',
+    platform: 'w3schools',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd2rs3',
+    id: 'd2rs2htl1',
+    name: 'Basic Java',
+    image:
+      'https://www.simplilearn.com/ice9/free_resources_article_thumb/C%2B%2B-vs-Java-C%2B%2B.png',
+    link: 'https://www.javatpoint.com/java-tutorial',
+    platform: 'javatpoint',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd2rs3',
+    id: 'd2rs2htl1',
+    name: 'Java Video Tutorial',
+    image:
+      'https://www.oracle.com/oce/press/assets/CONT6C95347B9ECC40CF8E7272A74FD80BDE/native/rc24-java-logo.gif',
+    link: 'https://www.youtube.com/playlist?list=PLE7E8B7F4856C9B19',
+    platform: 'YouTube',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd2rs4',
+    id: 'd2rs2htl1',
+    name: 'Python Tutorial',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png',
+    link: 'https://www.w3schools.com/python/',
+    platform: 'w3schools',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd2rs4',
+    id: 'd2rs2htl1',
+    name: 'Basic Python',
+    image:
+      'https://cdn.rebrickable.com/media/thumbs/mocs/moc-91667.jpg/1000x800.jpg',
+    link: 'https://www.javatpoint.com/java-tutorial',
+    platform: 'Tutorialspoint',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd2rs4',
+    id: 'd2rs2htl1',
+    name: 'Python Video Tutorial',
+    image:
+      'https://cdn.rebrickable.com/media/thumbs/mocs/moc-91667.jpg/1000x800.jpg',
+    link: 'https://www.youtube.com/playlist?list=PLWKjhJtqVAbnqBxcdjVGgT3uVR10bzTEB',
+    platform: 'YouTube',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd13rs1',
+    id: 'd13rs1htl1',
+    name: 'Introduction to Artificial Intelligence (AI)',
+    image:
+      'https://www.simplilearn.com/ice9/free_resources_article_thumb/Why-get-certified-in-Artificial-Intelligence.jpg',
+    link: 'https://in.coursera.org/learn/introduction-to-ai',
+    platform: 'coursera',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd13rs1',
+    id: 'd13rs1htl2',
+    name: 'Artificial Intelligence',
+    image:
+      'https://i0.wp.com/bdtechtalks.com/wp-content/uploads/2020/05/robot-thinking.jpg?fit=3558%2C2092&ssl=1',
+    link: 'https://www.classcentral.com/report/best-ai-courses/',
+    platform: 'classcentral',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd13rs1',
+    id: 'd13rs1htl3',
+    name: 'Artificial Intelligence I: Meta-Heuristics',
+    image:
+      'https://www.srimax.com/wp-content/uploads/2020/01/Importance-of-Artificial-Intelligence.jpeg',
+    link: 'https://www.udemy.com/course/artificial-intelligence-games-in-java/',
+    platform: 'Udemy',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd13rs2',
+    id: 'd13rs2htl1',
+    name: 'Machine Learning Specialization',
+    image:
+      'https://innovationatwork.ieee.org/wp-content/uploads/2021/02/bigstock-Human-Brain-d-Illustration-D-288314977_1024X684.png',
+    link: 'https://www.coursera.org/specializations/machine-learning-introduction',
+    platform: 'Coursera',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd13rs2',
+    id: 'd13rs2htl2',
+    name: 'Machine Learning Basics',
+    image: 'https://miro.medium.com/max/1400/1*c_fiB-YgbnMl6nntYGBMHQ.jpeg',
+    link: 'https://youtu.be/ukzFI9rgwfU',
+    platform: 'Simlilearn',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd13rs2',
+    id: 'd13rs2htl3',
+    name: 'machine learning roadmap',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
+    link: 'https://youtu.be/pHiMN_gy9mk',
+    platform: 'Daniel Bourke',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd13rs2',
+    id: 'd13rs2htl4',
+    name: 'Machine Learning',
+    image:
+      'https://blog.integral-system.fr/wp-content/uploads/2020/02/33797061.jpg',
+    link: 'https://youtu.be/GwIo3gDZCVQ',
+    platform: 'edureka',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd11rs1',
+    id: 'd11rs1htl1',
+    name: 'Introduction to Unity',
+    image: 'https://unity3d.com/files/images/ogimg.jpg',
+    link: 'https://in.coursera.org/learn/introduction-to-ai',
+    platform: 'coursera',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
+  },
+  {
+    skill_id: 'd11rs2',
+    id: 'd11rs1htl1',
+    name: 'Introduction to Unreal Engine',
+    image: 'https://unity3d.com/files/images/ogimg.jpg',
+    link: 'https://in.coursera.org/learn/introduction-to-ai',
+    platform: 'coursera',
+    created_at: '2020-10-10',
+    description:
+      'Lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet lorem ipsum doler set amet',
   },
 ];
 

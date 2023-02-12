@@ -3,6 +3,7 @@ import {
   HOME_SCREEN,
   HOME_TAB,
   PROFILE_TAB,
+  SEARCH_USERS_TAB,
   SETTINGS_SCREEN,
   SKILLS_SCREEN,
   SKILL_SCREEN,
@@ -12,6 +13,7 @@ import {
   EditProfile,
   Home,
   Profile,
+  SearchUser,
   Settings,
   Skill,
   Skills,
@@ -20,10 +22,10 @@ import {
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import React from 'react';
-import SI from 'react-native-vector-icons/SimpleLineIcons';
 import {Styles} from '../styles';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {useAppSelector} from '../redux/hooks';
 
 const Stack = createNativeStackNavigator();
 export function Authorised() {
@@ -78,9 +80,15 @@ export function Authorised() {
 const Tabs = createBottomTabNavigator();
 
 const HomeTabs = () => {
+  const {theme} = useAppSelector(state => state.theme);
   return (
     <Tabs.Navigator
       screenOptions={({route}) => ({
+        tabBarHideOnKeyboard: true,
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          backgroundColor: theme === 'dark' ? '#000' : '#fff',
+        },
         tabBarIcon: ({focused}) => {
           let iconName = '';
           let routeName = route.name;
@@ -94,6 +102,9 @@ const HomeTabs = () => {
               break;
             case TRENDING_TOPICS_TAB:
               iconName = focused ? 'trending-up' : 'trending-up-outline';
+              break;
+            case SEARCH_USERS_TAB:
+              iconName = focused ? 'search' : 'search-outline';
               break;
             default:
               iconName = focused ? 'home' : 'home-outline';
@@ -114,6 +125,7 @@ const HomeTabs = () => {
       })}>
       <Tabs.Screen name={HOME_TAB} component={Home} />
       <Tabs.Screen name={TRENDING_TOPICS_TAB} component={TrendingTopics} />
+      <Tabs.Screen name={SEARCH_USERS_TAB} component={SearchUser} />
       <Tabs.Screen name={PROFILE_TAB} component={Profile} />
     </Tabs.Navigator>
   );

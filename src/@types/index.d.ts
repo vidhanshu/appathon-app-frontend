@@ -45,6 +45,7 @@ export type ShortProfile = {
 };
 
 export type HowToLearn = {
+  skill_id: string;
   id: string;
   name: string;
   image: string;
@@ -53,11 +54,9 @@ export type HowToLearn = {
   created_at: string;
   description: string;
 };
-export type HowToLearnArray = {
-  id: string;
-  how_to_learn: HowToLearn[];
-};
+
 export type RelatedSkill = {
+  domain_id: string;
   id: string;
   name: string;
   image: string;
@@ -67,7 +66,6 @@ export type Domain = {
   name: string;
   description: string;
   image: string;
-  related_skills: RelatedSkill[];
 };
 export type Master = {
   id: string;
@@ -83,4 +81,8 @@ export type SkillType = {
   image: string;
   introduction: string;
   history: string;
+};
+export type OnSelectProp = {
+  id: string;
+  name: string;
 };

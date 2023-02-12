@@ -104,6 +104,7 @@ export function ForgotPassword({navigation}: ScreenProps) {
             label="New Password"
             placeholder="New Password"
             secureTextEntry
+            secure
             classOuterName="mb-10"
           />
           <RoundedButton
